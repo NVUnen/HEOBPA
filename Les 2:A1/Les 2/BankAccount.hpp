@@ -17,6 +17,7 @@ public:
     void put(const string& date, const string& amount, const string& type);
     void Transactions(BankAccount& account, const Transaction& transaction);
     
+    
     const string& getName() const;
     const string& getHistory() const;
     const int& getAmount() const;

@@ -1,32 +1,43 @@
 #include <iostream>
 #include <string>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-template<typename T> T biggest(T first, T second) {
-    if (first > second) return first;
-    return second;
+
+vector<string> arrayString = {"Hitman","Battlefield one", "Unravel", "AC4", "Batman"};
+vector<int> arrayInt = { 100, 45, 77, 9 , 56};
+
+template<typename T>
+T sorting(vector<T> Vector) {
+      sort(Vector.begin(), Vector.end());
+    for (T &s : Vector) {
+        cout << s << " ";
+    }
+    return NULL;
 }
+
+template<>
+string sorting(vector<string> Vector) {
+    sort(Vector.begin(), Vector.end());
+    for (string &s : Vector) {
+        cout << s << " ";
+    }
+    return "0";
+}
+
+
 
 int main ()
 {
+   
+    sorting(arrayString);
+    sorting(arrayInt);
     
-    // Array van strings
-    // Hoe wordt de volgorde van de strings in de array bepaalt?
-    string arraystring[5] {"Hitman","Battlefield one", "Unravel", "AC4", "Batman"};
-    //sort(arraystring, arraystring+5);
-    //for(const auto& str : arraystring) cout <<str << " ";
-    //cout << endl;
-     
-     
-    //Array van floats
-    float arrayfloat[5] {20,4,6,8,10};
-    //sort(arrayfloat, arrayfloat+5);
-    //for(const auto& str : arrayfloat) cout <<str << " ";
-    // cout << endl;
-    
-    
+    string input;
+    cin >> input;
+
     
     return 0;
      
